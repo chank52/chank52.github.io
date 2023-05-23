@@ -14,7 +14,6 @@ const pagginationBar = document.querySelector(".pagination")
 
 var totalPages = 0;
 totalPages = _totalCount / recordPerPage;
-console.log(totalPages);
 for(var j=0;j<totalPages;j++){
     pagginationBar.insertAdjacentHTML('beforeend', paginationItem((j+1)));
 }
@@ -53,8 +52,6 @@ function ShowPage(pageNo){
     contactList.innerHTML = "";
 
     for (i=pageNo*recordPerPage - recordPerPage;i<users.length;i++){
-        console.log(i);
-        console.log(recordCount);
         if(recordCount < recordPerPage){
             indexOfSpace = users[i].name.indexOf(" ");
 
